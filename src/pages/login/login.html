@@ -12,21 +12,30 @@
     <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/94311/profile/profile-512.jpg?3">
   </ion-avatar>
 
-  <ion-list>
+  <form [formGroup]="signup" (ngSubmit)="onSubmit(this.signup.value)">
+    <ion-list class="signup-input">
+      <ion-item>
+        <ion-label floating>Nombre de usuario</ion-label>
+        <ion-input type="text" formControlName="usuario" [class.invalid]="!signup.valid && (signup.controls.usuario.dirty || submitAttempt)"></ion-input>
+      </ion-item>
+      <ion-item *ngIf="!signup.controls.usuario.valid && (signup.controls.usuario.dirty || submitAttempt)" >
+        <small>Ingresar un nombre de usuario válido.</small>
+      </ion-item>
 
-    <ion-item>
-      <ion-label floating>Nombre de usuario</ion-label>
-      <ion-input type="text"></ion-input>
-    </ion-item>
+      <ion-item>
+        <ion-label floating>Contraseña</ion-label>
+        <ion-input type="password" formControlName="password" [class.invalid]="!signup.controls.password.valid && (signup.controls.password.dirty || submitAttempt)"></ion-input>
+      </ion-item>
 
-    <ion-item>
-      <ion-label floating>Contraseña</ion-label>
-      <ion-input type="password"></ion-input>
-    </ion-item>
+      <ion-item *ngIf="!signup.controls.password.valid && (signup.controls.password.dirty || submitAttempt)" >
+        <small>Solo ingresar números</small>
+      </ion-item>
 
-  </ion-list>
-
-  <button ion-button block class="buttonCenter" (click)="enterSystem()">Enter</button>
+    </ion-list>
+    <div class="signup-btn">
+      <button ion-button block class="buttonCenter" type="submit">Enter</button><!-- [disabled]="!this.signup.valid" -->
+    </div>
+  </form>
 
 </ion-content>
 

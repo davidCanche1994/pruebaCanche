@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 
-import { NavController, NavParams } from 'ionic-angular';
+import { NavController } from 'ionic-angular';
 
 import { ItemDetailsPage } from '../item-details/item-details';
 
@@ -9,12 +9,18 @@ import { ItemDetailsPage } from '../item-details/item-details';
   templateUrl: 'list.html'
 })
 export class ListPage {
-  icons: string[];
+  items: string[];
+  constructor(public navCtrl: NavController){
+    this.items = [ 'Los Millers','Que paso ayer?','Todo un Parto','Avengers Infinity War','Matrix','John Wick'];
+
+  }
+
+  /*   icons: string[];
   items: Array<{title: string, note: string, icon: string}>;
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
-    this.icons = ['flask', 'wifi', 'beer', 'football', 'basketball', 'paper-plane',
-    'american-football', 'boat', 'bluetooth', 'build'];
+    this.icons = ['game-controller-b','videocam','time', 'text', 'subway', 'star',
+    'snow'];
 
     this.items = [];
     for(let i = 1; i <= this.icons.length; i++) {
@@ -24,11 +30,8 @@ export class ListPage {
         icon: this.icons[Math.floor(Math.random() * this.icons.length)]
       });
     }
-  }
-
+  } */
   itemTapped(event, item) {
-    this.navCtrl.push(ItemDetailsPage, {
-      item: item
-    });
+    this.navCtrl.push(ItemDetailsPage, {item:item});
   }
 }

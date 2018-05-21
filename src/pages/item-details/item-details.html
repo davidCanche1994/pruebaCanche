@@ -8,11 +8,81 @@
 </ion-header>
 
 <ion-content>
-  <h3 text-center *ngIf="selectedItem">
-    {{selectedItem.title}}
-    <ion-icon [name]="selectedItem.icon"></ion-icon>
-  </h3>
-  <h4 text-center *ngIf="selectedItem">
-    You navigated here from <b>{{selectedItem.title}}</b>
-  </h4>
+    <ion-card *ngIf="selectedItem == 'Los Millers'">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRuv4JOl3Tn_-NmHzl0p9go5aFOD6cuGweM3pQKGCJtVmGZ5Z41"/>
+      <ion-card-content>
+        <ion-card-title>
+          Los Millers
+          </ion-card-title>
+        <p>
+          The most popular industrial group ever, and largely
+          responsible for bringing the music to a mass audience.
+        </p>
+      </ion-card-content>
+    </ion-card>
+
+    <ion-card *ngIf="selectedItem == 'Que paso ayer?'">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRH7Jak6N5CQOqoJ_bMy-_bRKFOu_qaUDVa4PVidNJQu0TWiBAmFQ">
+      <ion-card-content>
+        <ion-card-title>
+          HangOver
+          </ion-card-title>
+        <p>
+          The most popular industrial group ever, and largely
+          responsible for bringing the music to a mass audience.
+        </p>
+      </ion-card-content>
+    </ion-card>
+
+    <ion-card *ngIf="selectedItem == 'Todo un Parto'">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcShR4mnolk91Vxkstmzo0zOPbxZKX7u3vq9ySIxM4AqeQ8iLxSb"/>
+      <ion-card-content>
+        <ion-card-title>
+          Todo un Parto
+          </ion-card-title>
+        <p>
+          The most popular industrial group ever, and largely
+          responsible for bringing the music to a mass audience.
+        </p>
+      </ion-card-content>
+    </ion-card>
+
+    <ion-card *ngIf="selectedItem == 'Avengers Infinity War'">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRaJBGHJygGyVl3fTjUQjkj0_tvv6R0I6g6oCH-0kPBYKNnAClI-A"/>
+      <ion-card-content>
+        <ion-card-title>
+          Avengers Infinity War
+          </ion-card-title>
+        <p>
+          The most popular industrial group ever, and largely
+          responsible for bringing the music to a mass audience.
+        </p>
+      </ion-card-content>
+    </ion-card>
+
+    <ion-card *ngIf="selectedItem == 'Matrix'">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQRdBE1ApC2tD9WZpLB5Dpd-kCzv8kyA1CD6Jx19-_-8qTyWCOV"/>
+      <ion-card-content>
+        <ion-card-title>
+          Matrix
+          </ion-card-title>
+        <p>
+          The most popular industrial group ever, and largely
+          responsible for bringing the music to a mass audience.
+        </p>
+      </ion-card-content>
+    </ion-card>
+
+    <ion-card *ngIf="selectedItem == 'John Wick'">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTvAPx44WhuHiKH58qCu0E871zM2W8CgqGemJQpQjfdCM5wcMGGfQ"/>
+      <ion-card-content>
+        <ion-card-title>
+          John Wick
+          </ion-card-title>
+        <p>
+          The most popular industrial group ever, and largely
+          responsible for bringing the music to a mass audience.
+        </p>
+      </ion-card-content>
+    </ion-card>
 </ion-content>

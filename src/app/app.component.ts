@@ -30,8 +30,7 @@ export class MyApp {
     // set our app's pages
     this.pages = [
       { title: 'Home', component: HelloIonicPage },
-      { title: 'Lista', component: ListPage },
-      { title: 'Cerrar Sesión',component: LoginPage}
+      { title: 'Lista', component: ListPage }
     ];
   }
 
