@@ -17,20 +17,15 @@ export class EventsPage {
   calendars= [];
 
   constructor(public navCtrl: NavController, private calendar: Calendar, private plt: Platform) {
-    if(this.plt.is('Cordova')){
-      this.plt.ready().then(()=> {
-        this.calendar.listCalendars().then(data=> {
-          this.calendars = data;
-        })
+    this.plt.ready().then(()=> {
+      this.calendar.listCalendars().then(data=> {
+        this.calendars = data;
       })
-      this.calendar.createCalendar('myCalendar').then(
-        (msg)=> {console.log(msg)},
-        (err)=> {console.log(err)}
-      );
-    }
-    else{
-      
-    }
+    })
+    this.calendar.createCalendar('myCalendar').then(
+      (msg)=> {console.log(msg)},
+      (err)=> {console.log(err)}
+    );
   }
 
   addEvent(cal){
