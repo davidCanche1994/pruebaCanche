@@ -5,9 +5,11 @@ import { Platform, MenuController, Nav } from 'ionic-angular';
 import { HelloIonicPage } from '../pages/hello-ionic/hello-ionic';
 import { ListPage } from '../pages/list/list';
 import { LoginPage } from '../pages/login/login';
+import { EventsPage } from '../pages/events/events';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
+import { Calendar } from '@ionic-native/calendar';
 
 @Component({
   templateUrl: 'app.html'
@@ -30,7 +32,8 @@ export class MyApp {
     // set our app's pages
     this.pages = [
       { title: 'Home', component: HelloIonicPage },
-      { title: 'Lista', component: ListPage }
+      { title: 'Lista', component: ListPage },
+      { title: 'Eventos', component: EventsPage }
     ];
   }
 
